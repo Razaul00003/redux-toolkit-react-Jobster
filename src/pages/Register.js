@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { toast } from "react-toastify";
 import styled from "styled-components";
 import Logo from "../assets/images/logo.svg";
 import { FormRow } from "../components";
@@ -10,12 +11,21 @@ const Register = () => {
     isMember: true,
   };
   const [value, setValue] = useState(initialState);
-  const handleChange = (e) => {};
+  const handleChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+
+    setValue({ ...value, [name]: value });
+  };
   const toggleMember = () => {
     setValue({ ...value, isMember: !value.isMember });
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    const { name, email, password, isMember } = value;
+    if (!email || !password || (!isMember && !name)) {
+      toast.error("Please enter a valid form");
+    }
   };
   return (
     <Wrapper className="full-page">
@@ -52,13 +62,13 @@ const Register = () => {
           {value.isMember ? "Login" : "Register"}
         </button>
         {!value.isMember ? (
-          <button onClick={toggleMember} className="member-btn">
+          <p onClick={toggleMember} className="member-btn">
             Existing member? <span className="text-color-primary">Login</span>
-          </button>
+          </p>
         ) : (
-          <button onClick={toggleMember} className="member-btn">
+          <p onClick={toggleMember} className="member-btn">
             Not a member yet? <span className="text-color-primary">Signup</span>
-          </button>
+          </p>
         )}
       </form>
     </Wrapper>
