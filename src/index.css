@@ -185,6 +185,11 @@ ul {
   background: var(--red-dark);
   color: var(--white);
 }
+.member-btn {
+  border: none;
+  background-color: inherit;
+  padding-top: 2rem;
+}
 /* alerts */
 .alert {
   padding: 0.375rem 0.75rem;
@@ -296,6 +301,8 @@ ul {
 }
 .full-page {
   min-height: 100vh;
+  max-width: 90vw;
+  margin: auto;
 }
 
 .coffee-info {
@@ -330,4 +337,11 @@ ul {
 
 .section-center {
   text-align: center;
+}
+/* typography */
+.text-center {
+  text-align: center;
+}
+.text-color-primary {
+  color: var(--primary-500);
 }

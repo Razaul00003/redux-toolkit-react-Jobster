@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Navbar } from "../components";
 import main from "../assets/images/main.svg";
 import styled from "styled-components";
@@ -17,7 +18,9 @@ function LandingPage(props) {
             tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim
             veniam, quis nostrum exercitationem ullam d est laborum.
           </p>
-          <button className="btn btn-hero">Login/Register</button>
+          <Link to="/register" className="btn btn-hero">
+            Login/Register
+          </Link>
         </div>
         <img src={main} alt="job hunt" className="img main-img" />
       </div>
