@@ -324,3 +324,10 @@ ul {
 .Toastify__toast {
   text-transform: capitalize;
 }
+.section {
+  margin: auto;
+}
+
+.section-center {
+  text-align: center;
+}

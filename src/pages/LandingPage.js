@@ -1,14 +1,12 @@
 import React from "react";
-import logo from "../assets/images/logo.svg";
+import { Navbar } from "../components";
 import main from "../assets/images/main.svg";
 import styled from "styled-components";
 
 function LandingPage(props) {
   return (
     <Wrapper className="">
-      <nav>
-        <img src={logo} alt="jobster" className="logo" />
-      </nav>
+      <Navbar />
       <div className="container page">
         <div className="info">
           <h1>
