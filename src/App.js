@@ -1,7 +1,9 @@
+import { LandingPage } from "./pages";
+
 function App() {
   return (
     <div className="App">
-      <p>learn react custom projects</p>
+      <LandingPage />
     </div>
   );
 }
